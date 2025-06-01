@@ -16,6 +16,28 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* NEWS BAR */
+.news-bar {
+  background-color: #FFD700;
+  color: #4A148C;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-message {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slide 15s linear infinite;
+}
+
+@keyframes slide {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* HEADER */
 header {
   background-color: #6A1B9A;
   text-align: center;
@@ -33,6 +55,11 @@ header h1 {
   animation: fadeSlide 1s ease-out;
 }
 
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 header p {
   font-size: 1.2rem;
   margin: 0.5rem 0 0;
@@ -40,6 +67,7 @@ header p {
   animation: fadeIn 1s ease-in 0.3s forwards;
 }
 
+/* MAIN */
 main {
   flex: 1;
   text-align: center;
@@ -72,6 +100,7 @@ main p {
   animation: fadeIn 1s ease-in 1s forwards;
 }
 
+/* BUTTONS */
 .btn {
   background-color: #FFD700;
   color: #4A148C;
@@ -80,6 +109,12 @@ main p {
   text-decoration: none;
   font-weight: 600;
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #FFFFFF;
+  color: #4A148C;
+  transform: scale(1.05);
 }
 
 .btn.alt {
@@ -94,11 +129,7 @@ main p {
   color: #4A148C;
 }
 
-.btn.alt:hover {
-  background-color: #FFD700;
-  color: #4A148C;
-}
-
+/* FOOTER */
 footer {
   background-color: #6A1B9A;
   text-align: center;
@@ -109,9 +140,4 @@ footer {
 
 footer:hover {
   background-color: #7B1FA2;
-}
-
-@keyframes fadeSlide {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
 }
