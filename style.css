@@ -10,6 +10,47 @@ body {
   min-height: 100vh;
 }
 
+/* MENU BAR */
+.menu-bar {
+  background-color: #6A1B9A;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.menu-bar a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.menu-bar a:hover {
+  color: #FFFFFF;
+}
+
+/* NEWSBAR */
+.news-bar {
+  background-color: #FFD700;
+  color: #4A148C;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.news-bar .news-message {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  animation: slide 15s linear infinite;
+}
+
+@keyframes slide {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
 /* HEADER */
 header {
   background-color: #6A1B9A;
@@ -49,7 +90,7 @@ main p {
 
 .cta-buttons {
   display: flex;
-  flex-direction: column; /* stack buttons vertically */
+  flex-direction: column;
   align-items: center;
   gap: 1rem;
   margin: 1rem 0;
@@ -97,7 +138,7 @@ main p {
 
 .contact-form iframe {
   width: 100%;
-  height: 960px; /* Updated form height */
+  height: 775px;
   border: none;
   border-radius: 0.5rem;
   max-width: 100%;
@@ -110,24 +151,4 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-}
-
-.menu-bar {
-  background-color: #6A1B9A;
-  text-align: center;
-  padding: 0.75rem 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.menu-bar a {
-  color: #FFD700;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.menu-bar a:hover {
-  color: #FFFFFF;
 }
