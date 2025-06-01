@@ -82,16 +82,16 @@ main p {
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
-.btn:hover {
-  background-color: #FFFFFF;
-  color: #4A148C;
-  transform: scale(1.05);
-}
-
 .btn.alt {
   background-color: transparent;
   border: 2px solid #FFD700;
   color: #FFD700;
+  font-weight: 600;
+}
+
+.btn.alt:hover {
+  background-color: #FFD700;
+  color: #4A148C;
 }
 
 .btn.alt:hover {
