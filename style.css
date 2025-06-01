@@ -16,7 +16,7 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* NEWS BAR (rotating with clickable links, vertical carousel) */
+/* NEWS BAR (horizontal scrolling ticker) */
 .news-bar {
   background-color: #FFD700;
   color: #4A148C;
@@ -24,41 +24,32 @@ body {
   overflow: hidden;
   position: relative;
   text-align: center;
-  height: 2rem; /* ensure enough space for one line */
+  height: 2rem;
+  display: flex;
+  align-items: center;
 }
 
 .news-message {
-  display: flex;
-  flex-direction: column;
-  animation: slideUp 16s linear infinite;
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 20s linear infinite;
 }
 
-.news-message span {
-  display: block;
-  padding: 0.5rem 0;
-}
-
-.news-message span a {
+.news-message a {
   text-decoration: none;
   color: #4A148C;
   font-size: 1.2rem;
+  margin: 0 2rem;
   transition: color 0.3s;
 }
 
-.news-message span a:hover {
+.news-message a:hover {
   color: #6A1B9A;
 }
 
-@keyframes slideUp {
-  0% { transform: translateY(0%); }
-  20% { transform: translateY(0%); }
-  25% { transform: translateY(-100%); }
-  45% { transform: translateY(-100%); }
-  50% { transform: translateY(-200%); }
-  70% { transform: translateY(-200%); }
-  75% { transform: translateY(-300%); }
-  95% { transform: translateY(-300%); }
-  100% { transform: translateY(0%); }
+@keyframes ticker {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
 /* HEADER */
