@@ -16,70 +16,21 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* NEWS BAR (horizontal scrolling ticker) */
-.news-bar {
-  background-color: #FFD700;
-  color: #4A148C;
-  font-weight: 600;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  height: 2rem;
-  display: flex;
-  align-items: center;
-}
-
-.news-message {
-  display: inline-block;
-  white-space: nowrap;
-  animation: ticker 20s linear infinite;
-}
-
-.news-message a {
-  text-decoration: none;
-  color: #4A148C;
-  font-size: 1.2rem;
-  margin: 0 2rem;
-  transition: color 0.3s;
-}
-
-.news-message a:hover {
-  color: #6A1B9A;
-}
-
-@keyframes ticker {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
 /* HEADER */
 header {
   background-color: #6A1B9A;
   text-align: center;
   padding: 4rem 1rem;
-  transition: background-color 0.3s;
-}
-
-header:hover {
-  background-color: #7B1FA2;
 }
 
 header h1 {
   font-size: 3rem;
   margin: 0;
-  animation: fadeSlide 1s ease-out;
-}
-
-@keyframes fadeSlide {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 header p {
   font-size: 1.2rem;
   margin: 0.5rem 0 0;
-  opacity: 0;
-  animation: fadeIn 1s ease-in 0.3s forwards;
 }
 
 /* MAIN */
@@ -93,7 +44,6 @@ main h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #FFD700;
-  animation: fadeIn 1s ease-in 0.5s forwards;
 }
 
 main p {
@@ -101,8 +51,6 @@ main p {
   margin: 0 auto 2rem;
   font-size: 1rem;
   line-height: 1.6;
-  opacity: 0;
-  animation: fadeIn 1s ease-in 0.8s forwards;
 }
 
 .cta-buttons {
@@ -111,12 +59,12 @@ main p {
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 1rem;
-  opacity: 0;
-  animation: fadeIn 1s ease-in 1s forwards;
 }
 
-/* BUTTONS */
-.btn {
+/* BUTTONS AND LINKS */
+.btn,
+.email-link,
+.reddit-link {
   background-color: #FFD700;
   color: #4A148C;
   padding: 0.75rem 1.5rem;
@@ -124,24 +72,44 @@ main p {
   text-decoration: none;
   font-weight: 600;
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  border: 2px solid #FFD700;
 }
 
-.btn:hover {
+.btn:hover,
+.email-link:hover,
+.reddit-link:hover {
   background-color: #FFFFFF;
   color: #4A148C;
   transform: scale(1.05);
 }
 
-.btn.alt {
-  background-color: transparent;
-  border: 2px solid #FFD700;
-  color: #FFD700;
-  font-weight: 600;
+/* CONTACT PAGE */
+.contact-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.btn.alt:hover {
-  background-color: #FFD700;
-  color: #4A148C;
+.contact-container h2 {
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+
+.contact-container p {
+  margin-bottom: 1rem;
+}
+
+.contact-form iframe {
+  width: 100%;
+  height: 1000px;
+  min-height: 800px;
+  border: none;
+  border-radius: 0.5rem;
+  max-width: 100%;
+  overflow: auto;
 }
 
 /* FOOTER */
@@ -150,9 +118,4 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  transition: background-color 0.3s;
-}
-
-footer:hover {
-  background-color: #7B1FA2;
 }
