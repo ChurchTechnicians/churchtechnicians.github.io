@@ -16,27 +16,26 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* NEWS BAR (rotating with clickable links) */
+/* NEWS BAR (rotating with clickable links, vertical carousel) */
 .news-bar {
   background-color: #FFD700;
   color: #4A148C;
   font-weight: 600;
-  padding: 0.75rem 0;
   overflow: hidden;
   position: relative;
   text-align: center;
+  height: 2rem; /* ensure enough space for one line */
 }
 
 .news-message {
-  position: relative;
-  height: 1.5rem; /* adjust as needed */
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 16s linear infinite;
 }
 
 .news-message span {
-  position: absolute;
-  width: 100%;
-  opacity: 0;
-  animation: slideFade 16s linear infinite;
+  display: block;
+  padding: 0.5rem 0;
 }
 
 .news-message span a {
@@ -50,18 +49,17 @@ body {
   color: #6A1B9A;
 }
 
-@keyframes slideFade {
-  0% { opacity: 0; }
-  5% { opacity: 1; }
-  20% { opacity: 1; }
-  25% { opacity: 0; }
-  100% { opacity: 0; }
+@keyframes slideUp {
+  0% { transform: translateY(0%); }
+  20% { transform: translateY(0%); }
+  25% { transform: translateY(-100%); }
+  45% { transform: translateY(-100%); }
+  50% { transform: translateY(-200%); }
+  70% { transform: translateY(-200%); }
+  75% { transform: translateY(-300%); }
+  95% { transform: translateY(-300%); }
+  100% { transform: translateY(0%); }
 }
-
-.news-message span:nth-child(1) { animation-delay: 0s; }
-.news-message span:nth-child(2) { animation-delay: 4s; }
-.news-message span:nth-child(3) { animation-delay: 8s; }
-.news-message span:nth-child(4) { animation-delay: 12s; }
 
 /* HEADER */
 header {
