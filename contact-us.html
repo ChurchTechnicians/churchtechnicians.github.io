@@ -13,13 +13,17 @@
     <a href="/contact-us.html">Contact Us</a>
   </nav>
 
-  <header>
+  <header class="hero">
     <h1>Contact Us</h1>
-    <p>We’d love to hear from you! Visit the page below to get in touch or join the community.</p>
+    <p>We’d love to hear from you! Join the community or drop us a line.</p>
+    <div class="cta-buttons">
+      <a href="https://www.reddit.com/r/churchTechnicians/" target="_blank" class="btn">Reddit Community</a>
+      <a href="#contact" class="btn alt">Send a Message</a>
+    </div>
   </header>
 
   <main>
-    <div class="contact-container">
+    <div id="contact" class="contact-container">
       <h2>Get in Touch</h2>
       <div class="cta-buttons">
         <a href="/contact-us.html" class="btn">Contact Us Page</a>
@@ -41,6 +45,10 @@
           <button type="submit" class="btn">Send</button>
         </form>
       </div>
+      <section class="reddit-feed">
+        <h2>Latest from r/churchTechnicians</h2>
+        <iframe src="https://www.reddit.com/r/churchTechnicians/new/.embed?limit=5&amp;showmedia=true" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+      </section>
     </div>
   </main>
 
