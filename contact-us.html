@@ -31,11 +31,16 @@
       <p>Or simply fill out this form:</p>
 
       <div class="contact-form">
-        <iframe 
-          src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAeDCRXtUNDRIT0dVU1BTM1BCS1UyMURNRDFQMkVCNS4u&amp;embed=true"
-          frameborder="0" 
-          allowfullscreen>
-        </iframe>
+        <form action="https://formsubmit.co/churchtechnicians@proton.me" method="POST">
+          <label for="name">Name:</label><br />
+          <input type="text" id="name" name="name" required /><br />
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required /><br />
+          <label for="message">Message:</label><br />
+          <textarea id="message" name="message" rows="5" required></textarea><br />
+          <input type="hidden" name="_captcha" value="false" />
+          <button type="submit" class="btn">Send</button>
+        </form>
       </div>
     </div>
   </main>
