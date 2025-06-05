@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact - Church Technicians</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Join the community or drop us a line.</p>
+    <div class="cta">
+      <a href="https://www.reddit.com/r/churchTechnicians/" target="_blank" class="button">Reddit Community</a>
+    </div>
+  </header>
+  <main>
+    <section class="contact-section">
+      <h2>Send a Message</h2>
+      <form action="mailto:churchtechnicians@proton.me" method="post" enctype="text/plain">
+        <label>Name: <input type="text" name="name" required></label>
+        <label>Email: <input type="email" name="email" required></label>
+        <label>Message:<br>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="button">Send</button>
+      </form>
+      <h2>Latest from r/churchTechnicians</h2>
+      <iframe src="https://www.reddit.com/r/churchTechnicians/new/.embed?limit=5&amp;showmedia=true" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+    </section>
+  </main>
+  <footer>
+    <small>&copy; 2025 Church Technicians Community</small>
+  </footer>
+</body>
+</html>
