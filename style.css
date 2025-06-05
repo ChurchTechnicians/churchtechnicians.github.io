@@ -1,193 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+* {
+  box-sizing: border-box;
+}
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, #14121f, #2a2144);
-  color: #ffffff;
+  font-family: Arial, sans-serif;
   margin: 0;
+  background-color: #f5f5f5;
+  color: #333;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* MENU BAR */
-.menu-bar {
-  background-color: rgba(0, 0, 0, 0.3);
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  background: #57248d;
+  padding: 0.5rem 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
   text-align: center;
-  padding: 0.75rem 1rem;
+  padding: 2rem 1rem;
+  background: #7644a7;
+  color: #fff;
+}
+
+.cta {
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  backdrop-filter: blur(10px);
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.menu-bar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.menu-bar a:hover {
-  color: #ffc107;
-}
-
-/* NEWSBAR */
-.news-bar {
-  background-color: #ffc107;
-  color: #211742;
-  overflow: hidden;
-  white-space: nowrap;
-  text-align: center;
-}
-
-.news-bar .news-message {
-  display: inline-block;
+.button {
+  background: #ffca28;
+  color: #000;
   padding: 0.5rem 1rem;
-  animation: slide 15s linear infinite;
+  border-radius: 4px;
+  text-decoration: none;
 }
 
-@keyframes slide {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+.button.outline {
+  background: transparent;
+  border: 2px solid #ffca28;
+  color: #ffca28;
 }
 
-/* HEADER */
-header.hero {
-  background: linear-gradient(135deg, #552ab8, #211742);
-  text-align: center;
-  padding: 6rem 1rem 4rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-header.hero h1 {
-  font-size: 3.5rem;
-  margin: 0 0 0.5rem;
-}
-
-header.hero p {
-  font-size: 1.25rem;
-  margin: 0 0 2rem;
-}
-
-/* MAIN */
 main {
   flex: 1;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 900px;
   margin: 0 auto;
 }
 
-.feature {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 1rem;
-  padding: 1.5rem;
+.features article {
+  background: #fff;
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.feature h3 {
-  color: #ffc107;
-  margin-bottom: 0.5rem;
-}
-
-.feature p {
-  line-height: 1.6;
-  margin: 0;
-  color: #e4e4e4;
-}
-
-.cta-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin: 1rem 0;
-}
-
-.btn {
-  background-color: #ffc107;
-  color: #211742;
-  padding: 0.75rem 1.5rem;
-  border-radius: 2rem;
-  text-decoration: none;
-  font-weight: 600;
-  border: none;
-  transition: background-color 0.3s, color 0.3s, transform 0.2s;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  display: inline-block;
-}
-
-.btn:hover {
-  background-color: #ffffff;
-  color: #211742;
-  transform: translateY(-2px);
-}
-
-.btn.alt {
-  background-color: transparent;
-  border: 2px solid #ffc107;
-  color: #ffc107;
-}
-
-.btn.alt:hover {
-  background-color: #ffc107;
-  color: #211742;
-}
-
-/* CONTACT PAGE */
-.contact-container {
-  max-width: 700px;
-  margin: 2rem auto;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  border: 1px solid #444;
-  background-color: #2a2144;
-  color: #ffffff;
-}
-
-.contact-form button {
-  align-self: flex-start;
-}
-
-
-.reddit-feed {
-  margin-top: 3rem;
-}
-
-.reddit-feed iframe {
-  width: 100%;
-  height: 600px;
-  border: none;
-  border-radius: 0.5rem;
-}
-
-/* FOOTER */
 footer {
-  background-color: #211742;
+  background: #57248d;
+  color: #fff;
   text-align: center;
   padding: 1rem;
-  font-size: 0.9rem;
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-section iframe {
+  width: 100%;
+  border: none;
+  height: 500px;
 }
