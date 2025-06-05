@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reach out to the Church Technicians team or join our Reddit community." />
   <title>Contact Us - Church Technicians</title>
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="/style.css" />
@@ -13,25 +14,26 @@
     <a href="/contact-us.html">Contact Us</a>
   </nav>
 
-  <header>
+  <header class="hero">
     <h1>Contact Us</h1>
-    <p>We’d love to hear from you! Visit the page below to get in touch or join the community.</p>
+    <p>We’d love to hear from you! Join the community or drop us a line.</p>
+    <div class="cta-buttons">
+      <a href="https://www.reddit.com/r/churchTechnicians/" target="_blank" class="btn">Reddit Community</a>
+      <a href="#contact" class="btn alt">Send a Message</a>
+    </div>
   </header>
 
   <main>
-    <div class="contact-container">
+    <div id="contact" class="contact-container">
       <h2>Get in Touch</h2>
-      <div class="cta-buttons">
-        <a href="/contact-us.html" class="btn">Contact Us Page</a>
-      </div>
-      <p>Or visit our community forum on Reddit:</p>
+      <p>Visit our community forum on Reddit:</p>
       <div class="cta-buttons">
         <a href="https://www.reddit.com/r/churchTechnicians/" target="_blank" class="btn alt">Reddit</a>
       </div>
       <p>Or simply fill out this form:</p>
 
       <div class="contact-form">
-        <form action="mailto:churchtechnicians@proton.me" method="post" enctype="text/plain">
+        <form action="mailto:churchtechnicians@proton.me?subject=Website%20Inquiry" method="post" enctype="text/plain">
           <label for="name">Name:</label><br />
           <input type="text" id="name" name="name" required /><br />
           <label for="email">Email:</label><br />
@@ -41,11 +43,16 @@
           <button type="submit" class="btn">Send</button>
         </form>
       </div>
+      <section class="reddit-feed">
+        <h2>Latest from r/churchTechnicians</h2>
+        <iframe src="https://www.redditmedia.com/r/churchTechnicians/new/?ref_source=embed&amp;embed=true&amp;theme=dark" sandbox="allow-scripts allow-same-origin allow-popups" loading="lazy"></iframe>
+      </section>
     </div>
   </main>
 
   <footer>
     &copy; 2025 Church Technicians Community
   </footer>
+  <script async src="https://embed.redditmedia.com/widgets/platform.js" charset="UTF-8"></script>
 </body>
 </html>
